@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>頂級超跑 - 奢華體驗</title>
-    <!-- 引入 Google Fonts 的高級字體：Cinzel (襯線體) 與 Montserrat (無襯線體) -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 頂部導覽列 -->
     <nav id="navbar">
         <div class="logo">LUXURY AUTO</div>
-        <ul class="nav-links">
+        
+        <!-- 新增：手機版漢堡選單按鈕 -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
             <li><a href="#models">全車系</a></li>
             <li><a href="#brand">品牌故事</a></li>
             <li><a href="#lifestyle">極致生活</a></li>
@@ -20,19 +26,15 @@
         </ul>
     </nav>
 
-    <!-- 主視覺區塊 (Hero Section) -->
     <header class="hero">
-        <!-- 影片背景：設定為自動播放、靜音、循環播放 -->
-        <video autoplay muted loop playsinline id="bg-video">
-            <!-- 這裡使用了一個免費的跑車展示影片作為範例，你可以換成自己的 .mp4 檔案路徑 -->
+        <!-- 新增：poster 屬性。如果影片播不出來，會先顯示這張高級跑車圖 -->
+        <video autoplay muted loop playsinline id="bg-video" poster="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=1919&auto=format&fit=crop">
             <source src="https://cdn.pixabay.com/video/2021/08/04/83870-584742614_large.mp4" type="video/mp4">
             您的瀏覽器不支援影片標籤。
         </video>
 
-        <!-- 暗色遮罩：確保影片畫面不會太亮，讓白色字體更容易閱讀 -->
         <div class="overlay"></div>
 
-        <!-- 中間的文字與按鈕內容 -->
         <div class="hero-content">
             <h2 class="subtitle">無與倫比的極致體驗</h2>
             <h1 class="title">BEYOND PERFORMANCE</h1>
