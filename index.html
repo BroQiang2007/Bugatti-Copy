@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頂級超跑 - 奢華體驗</title>
+    <!-- 引入 Google Fonts 的高級字體：Cinzel (襯線體) 與 Montserrat (無襯線體) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 頂部導覽列 -->
+    <nav id="navbar">
+        <div class="logo">LUXURY AUTO</div>
+        <ul class="nav-links">
+            <li><a href="#models">全車系</a></li>
+            <li><a href="#brand">品牌故事</a></li>
+            <li><a href="#lifestyle">極致生活</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主視覺區塊 (Hero Section) -->
+    <header class="hero">
+        <!-- 影片背景：設定為自動播放、靜音、循環播放 -->
+        <video autoplay muted loop playsinline id="bg-video">
+            <!-- 這裡使用了一個免費的跑車展示影片作為範例，你可以換成自己的 .mp4 檔案路徑 -->
+            <source src="https://cdn.pixabay.com/video/2021/08/04/83870-584742614_large.mp4" type="video/mp4">
+            您的瀏覽器不支援影片標籤。
+        </video>
+
+        <!-- 暗色遮罩：確保影片畫面不會太亮，讓白色字體更容易閱讀 -->
+        <div class="overlay"></div>
+
+        <!-- 中間的文字與按鈕內容 -->
+        <div class="hero-content">
+            <h2 class="subtitle">無與倫比的極致體驗</h2>
+            <h1 class="title">BEYOND PERFORMANCE</h1>
+            <a href="#discover" class="cta-button">探索更多</a>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
