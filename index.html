@@ -9,9 +9,9 @@
 </head>
 <body>
     <nav id="navbar">
-        <div class="logo">LUXURY AUTO</div>
+        <!-- 點擊 Logo 會回到首頁 -->
+        <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">LUXURY AUTO</a></div>
         
-        <!-- 新增：手機版漢堡選單按鈕 -->
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -19,17 +19,19 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#models">全車系</a></li>
-            <li><a href="#brand">品牌故事</a></li>
-            <li><a href="#lifestyle">極致生活</a></li>
-            <li><a href="#contact">聯絡我們</a></li>
+            <!-- 這裡把 # 換成了真實的網頁檔案名稱 -->
+            <li><a href="models.html">全車系</a></li>
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">極致生活</a></li>
+            <li><a href="#">聯絡我們</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <!-- 新增：poster 屬性。如果影片播不出來，會先顯示這張高級跑車圖 -->
-        <video autoplay muted loop playsinline id="bg-video" poster="photo-1541348263662-e068662d82af.jpeg">
-            <source src="https://cdn.pixabay.com/video/2021/08/04/83870-584742614_large.mp4" type="video/mp4">
+        <!-- 【關鍵修改】：讀取同資料夾下的 bg-image.jpg 與 bg-video.mp4 -->
+        <!-- 如果你還沒下載檔案，這裡我也放了一個維基百科的穩定圖片網址當備用 -->
+        <video autoplay muted loop playsinline id="bg-video" poster="bg-image.jpg">
+            <source src="bg-video.mp4" type="video/mp4">
             您的瀏覽器不支援影片標籤。
         </video>
 
@@ -38,7 +40,8 @@
         <div class="hero-content">
             <h2 class="subtitle">無與倫比的極致體驗</h2>
             <h1 class="title">BEYOND PERFORMANCE</h1>
-            <a href="#discover" class="cta-button">探索更多</a>
+            <!-- 按鈕導向「全車系」頁面 -->
+            <a href="models.html" class="cta-button">探索更多</a>
         </div>
     </header>
 
