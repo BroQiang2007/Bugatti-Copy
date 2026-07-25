@@ -5,21 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>頂級超跑 - 奢華體驗</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- 加上 ?v=2 強制更新 -->
+    <link rel="stylesheet" href="style.css?v=2">
+    
+    <!-- 終極防護：把最關鍵的排版直接寫在 head 裡，確保一定會生效 -->
+    <style>
+        .hero {
+            position: relative !important;
+            width: 100% !important;
+            height: 100vh !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            background-color: #000 !important;
+        }
+        #bg-video {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            z-index: 0 !important; /* 墊在底層 */
+        }
+        .overlay {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: rgba(0, 0, 0, 0.6) !important; /* 加深一點遮罩讓字更清楚 */
+            z-index: 1 !important;
+        }
+        .hero-content {
+            position: relative !important;
+            z-index: 2 !important; /* 文字浮在最上層 */
+            text-align: center !important;
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar">
-        <!-- 點擊 Logo 會回到首頁 -->
         <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">LUXURY AUTO</a></div>
-        
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-
         <ul class="nav-links" id="nav-links">
-            <!-- 這裡把 # 換成了真實的網頁檔案名稱 -->
             <li><a href="models.html">全車系</a></li>
             <li><a href="#">品牌故事</a></li>
             <li><a href="#">極致生活</a></li>
@@ -28,19 +62,13 @@
     </nav>
 
     <header class="hero">
-        <!-- 【關鍵修改】：讀取同資料夾下的 bg-image.jpg 與 bg-video.mp4 -->
-        <!-- 如果你還沒下載檔案，這裡我也放了一個維基百科的穩定圖片網址當備用 -->
-        <video autoplay muted loop playsinline id="bg-video.mp4" poster="bg-image.jpg">
+        <video autoplay muted loop playsinline id="bg-video" poster="bg-image.jpg">
             <source src="bg-video.mp4" type="video/mp4">
-            您的瀏覽器不支援影片標籤。
         </video>
-
         <div class="overlay"></div>
-
         <div class="hero-content">
             <h2 class="subtitle">無與倫比的極致體驗</h2>
             <h1 class="title">BEYOND PERFORMANCE</h1>
-            <!-- 按鈕導向「全車系」頁面 -->
             <a href="models.html" class="cta-button">探索更多</a>
         </div>
     </header>
