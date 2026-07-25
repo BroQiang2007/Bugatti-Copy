@@ -75,43 +75,46 @@ h1, .logo {
     transition: 0.3s ease;
 }
 
-/* 主視覺設定 */
+/* 主視覺全螢幕容器 */
 .hero {
-    position: relative;
-    height: 100vh;
+    position: relative; /* 關鍵：這是讓影片能貼齊邊緣的基準 */
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    /* 如果影片跟 poster 都失效，最後的底色 */
-    background-color: #111; 
+    overflow: hidden; /* 確保影片不會超出畫面外 */
 }
 
+/* 影片背景強制填滿且墊底 */
 #bg-video {
-    position: absolute;
+    position: absolute; /* 關鍵：讓影片脫離排版，變成背景 */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -2;
+    object-fit: cover; /* 讓影片保持比例並填滿整個畫面，不會變形 */
+    z-index: -2; /* 讓影片移到最下層 */
 }
 
+/* 半透明黑色遮罩 (讓白色文字更清楚) */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1; /* 放在影片上方，文字下方 */
 }
 
+/* 中間的文字與按鈕區塊 */
 .hero-content {
-    z-index: 1;
-    animation: fadeIn 2s ease-out;
+    position: relative; /* 確保文字區塊浮在影片和遮罩的上方 */
+    z-index: 1; 
+    text-align: center;
     padding: 0 20px;
+    animation: fadeIn 2s ease-out;
 }
 
 .subtitle {
